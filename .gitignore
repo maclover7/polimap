@@ -6,3 +6,4 @@ dist
 # Polimap artifacts
 config.json
 downloads
+output

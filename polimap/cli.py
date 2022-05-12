@@ -25,5 +25,7 @@ def download_results(config):
         config['election_owner'],
         config['election_id'],
         config['contest_name'],
+        config['contest_shortname'],
+        config['formatted_candidate_names'],
         config['downloaded'])
     downloader.run()

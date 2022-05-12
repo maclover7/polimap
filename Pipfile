@@ -16,4 +16,5 @@ twine = "*"
 [scripts]
 build-release = "python setup.py sdist bdist_wheel"
 check-release = "twine check dist/*"
+fix-style = "autopep8 --recursive --in-place --aggressive ."
 push-release = "twine upload dist/*"
