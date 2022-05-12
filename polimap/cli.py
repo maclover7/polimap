@@ -1,4 +1,13 @@
 import click
+import json
+
+from .results_downloader import ResultsDownloader
+
+def set_config(ctx, param, filename):
+    with open(filename) as f:
+        config = json.loads(f.read())
+        ctx.default_map = config
+        return config
 
 @click.group()
 @click.option('--debug/--no-debug', default=False)
@@ -6,5 +15,8 @@ def cli(debug):
     click.echo(f"Debug mode is {'on' if debug else 'off'}")
 
 @cli.command()
-def hello():
-    click.echo("polimap")
+@click.option("--config", callback=set_config, type=click.Path())
+def download_results(config):
+    downloader = ResultsDownloader()
+    downloader.run()
+    click.echo(config)
