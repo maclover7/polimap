@@ -1,11 +1,13 @@
 import os
 from setuptools import setup
 
+
 def read(filename):
     current_directory = os.path.dirname(__file__)
     filepath = os.path.join(current_directory, filename)
     with open(filepath) as f:
         return f.read()
+
 
 setup(
     name="polimap",
@@ -18,7 +20,7 @@ setup(
     long_description_content_type="text/markdown",
     packages=("polimap",),
     entry_points={"console_scripts": ("polimap = polimap.cli:cli")},
-    install_requires=["click"],
+    install_requires=["clarify", "click", "requests"],
     license="MIT",
     classifiers=[
         "License :: OSI Approved :: MIT License",

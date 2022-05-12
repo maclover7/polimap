@@ -2,3 +2,7 @@
 build
 dist
 *.egg-info
+
+# Polimap artifacts
+config.json
+downloads

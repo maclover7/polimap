@@ -4,9 +4,12 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+clarify="*"
 click="*"
+requests="*"
 
 [dev-packages]
+autopep8="*"
 flake8 = "*"
 twine = "*"
 
