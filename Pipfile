@@ -5,3 +5,9 @@ name = "pypi"
 
 [dev-packages]
 flake8 = "*"
+twine = "*"
+
+[scripts]
+build-release = "python setup.py sdist bdist_wheel"
+check-release = "twine check dist/*"
+push-release = "twine upload dist/*"

@@ -1,0 +1,4 @@
+# Python distribution
+build
+dist
+*.egg-info
