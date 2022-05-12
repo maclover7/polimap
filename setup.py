@@ -17,8 +17,8 @@ setup(
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
     packages=("polimap",),
-    entry_points={"console_scripts": ("polimap = polimap")},
-    install_requires=[],
+    entry_points={"console_scripts": ("polimap = polimap.cli:cli")},
+    install_requires=["click"],
     license="MIT",
     classifiers=[
         "License :: OSI Approved :: MIT License",
